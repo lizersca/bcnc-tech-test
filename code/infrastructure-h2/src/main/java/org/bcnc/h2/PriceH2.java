@@ -13,7 +13,7 @@ import java.time.Instant;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class Price {
+public class PriceH2 {
 // TODO criteria (jakarta.persistence
     @Id
             @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,9 +1,7 @@
 package org.bcnc.domain.entities;
 
-import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 @Builder
