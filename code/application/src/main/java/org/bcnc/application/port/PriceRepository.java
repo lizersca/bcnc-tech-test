@@ -4,7 +4,7 @@ import org.bcnc.domain.entities.Price;
 
 import java.time.Instant;
 
-public interface ManagePricesOut {
+public interface PriceRepository {
 
     Price findPricesBy(Instant applicationDate, Integer productId, Integer brandId);
 }

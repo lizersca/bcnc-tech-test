@@ -16,8 +16,8 @@ import java.time.Instant;
 public class PriceH2 {
 // TODO criteria (jakarta.persistence
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-            @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Integer id;
 
     @Column(name = "start_date")
