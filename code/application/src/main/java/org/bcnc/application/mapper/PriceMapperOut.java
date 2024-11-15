@@ -2,7 +2,7 @@ package org.bcnc.application.mapper;
 
 import org.bcnc.domain.entities.Price;
 
-public interface PriceMapper<T> {
+public interface PriceMapperOut<T> {
 
-    T mapToAdapter(Price price);
+    T map(Price price);
 }

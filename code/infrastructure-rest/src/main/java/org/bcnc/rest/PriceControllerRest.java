@@ -32,7 +32,7 @@ public class PriceControllerRest implements PricesApi<ResponseEntity<PriceRest>>
         if (isNull(applicationDate) && isNull(productId) && isNull(brandId)) {
             throw new MissingParameterException();
         }
-        return pricesMapper.mapToAdapter(
+        return pricesMapper.map(
                 findPriceUseCase.findPriceBy(applicationDate, productId, brandId));
     }
 }

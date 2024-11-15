@@ -1,6 +1,6 @@
 package org.bcnc.h2;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.bcnc.application.port.PriceRepository;
 import org.bcnc.domain.entities.Price;
 import org.springframework.stereotype.Repository;
@@ -8,13 +8,15 @@ import org.springframework.stereotype.Repository;
 import java.time.Instant;
 
 @Repository
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class PriceRepositoryH2 implements PriceRepository {
 
-    private PriceMapperH2 pricesMapper;
+    private final PriceRepositoryJPA priceRepositoryJPA;
+
+    private final PriceMapperInH2 pricesMapper;
 
     @Override
     public Price findPricesBy(Instant applicationDate, Integer productId, Integer brandId) {
-        return null;
+        return pricesMapper.map(priceRepositoryJPA.findBy(applicationDate, productId, brandId));
     }
 }
